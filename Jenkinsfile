@@ -10,13 +10,13 @@ pipeline {
         SONARQUBE_ENV = 'SonarQube'
         DOCKER_IMAGE = "kondavenkat035/telegram"
     }
-    stage('Clean Workspace') {
+
+    stages {
+        stage('Clean Workspace') {
     steps {
         deleteDir()
     }
 }
-
-    stages {
 
         stage('Clone Repository') {
             steps {
