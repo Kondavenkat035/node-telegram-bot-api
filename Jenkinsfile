@@ -24,6 +24,14 @@ pipeline {
                 sh 'npm install'
             }
         }
+        stage('Debug') {
+           steps {
+               sh 'pwd'
+               sh 'ls -l'
+               sh 'cat package.json'
+               sh 'npm run'
+           }
+        }
 
         stage('Build Application') {
             steps {
